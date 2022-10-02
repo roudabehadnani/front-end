@@ -1,0 +1,154 @@
+body {
+    background-color: aliceblue;
+}
+
+.container {
+
+    max-width: 1024px;
+    font-family: sans-serif;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar navbar navbar"
+        "main main main main main main main"
+        "main main main main main main main"
+        "main main main main main main main"
+        "main main main main main main main"
+        "footer footer footer footer footer footer footer";
+}
+
+.navbar {
+    grid-area: navbar;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 0.55fr 0.55fr 0.55fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "logo link1 link2 link3 index";
+}
+
+a:visited {
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+.index a:hover {
+    color: #00f0b4;
+}
+
+.link1:hover {
+    background-color: #ddd;
+}
+
+.link2:hover {
+    background-color: #ddd;
+}
+
+.link3:hover {
+    background-color: #ddd;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: rgb(29, 31, 28);
+    padding-left: 5px;
+}
+
+.index {
+    grid-area: index;
+    background-color: rgb(29, 31, 28);
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 30px;
+}
+
+.link1 {
+    grid-area: link1;
+    list-style-type: none;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(29, 31, 28, 0.521);
+
+}
+
+.link2 {
+    grid-area: link2;
+    list-style-type: none;
+    text-align: center;
+    background-color: rgba(29, 31, 28, 0.521);
+    padding: 30px;
+}
+
+.link3 {
+    grid-area: link3;
+    list-style-type: none;
+    background-color: rgba(29, 31, 28, 0.521);
+    text-align: center;
+    padding: 30px;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: rgba(15, 211, 97, 0.185);
+}
+
+h3 {
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 20%;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.form {
+    margin-left: 100px;
+    width: 80%;
+    padding: 5px;
+    border: solid 2px navy;
+    border-radius: 15px;
+    color: black;
+}
+
+.button {
+    border: solid 1px;
+    color: black;
+    padding: 7px 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 13px;
+    margin: 4px 2px;
+}
+
+.button:hover {
+    background-color: white;
+    color: white;
+}
+
+#button1 {
+    background-color: #e00b99;
+}
+
+#button2 {
+    background-color: #00f0b4;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgba(0, 0, 0, 0.363);
+    text-align: center;
+    padding: 10px;
+}
