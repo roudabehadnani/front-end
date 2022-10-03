@@ -1,52 +1,47 @@
-body{
+body {
     background-color: rgba(220, 220, 220, 0.308);
 }
 
 .container {
     max-width: 1024px;
     font-family: sans-serif;
-    margin: auto;  
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1.5fr 0.2fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "navbar navbar navbar navbar navbar navbar navbar"
-      "main main main main main aside aside"
-      "main main main main main aside aside"
-      "main main main main main aside aside"
-      "main main main main main aside aside"
-      "footer footer footer footer footer footer footer";
-  }
-  
-  .navbar {
-     
+        "navbar navbar navbar navbar navbar navbar navbar"
+        "main main main main main aside aside"
+        "main main main main main aside aside"
+        "main main main main main aside aside"
+        "main main main main main aside aside"
+        "footer footer footer footer footer footer footer";
+}
+
+.navbar {
+
     display: grid;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "logo link1 link2 link3 login";
+        "logo link1 link2 link3 login";
     grid-area: navbar;
-  }
-
-
-  a:visited {
-    color: white;
 }
 
-a:link {
+a:visited {
     color: white;
 }
 
 a:hover {
-    color: black;
+    color: rgba(156, 34, 172, 0.959);
 }
 
-.login a:hover {
-    color: #00f0b4;
+.login:hover {
+    background-color: rgba(173, 216, 230, 0.603);
 }
 
 .link1:hover {
@@ -65,15 +60,15 @@ a:hover {
     grid-area: logo;
     background-color: navy;
     padding-left: 5px;
-    color: azure;
+    color: gainsboro;
 }
 
 .login {
     grid-area: login;
     background-color: navy;
     text-align: right;
-    padding-right: 5px;
-    padding-top: 30px;
+    padding-right: 15px;
+    padding-top: 40px;
     color: azure;
 }
 
@@ -81,10 +76,9 @@ a:hover {
     grid-area: link1;
     list-style-type: none;
     text-align: center;
-    padding: 30px;
-    
+    padding: 40px;
+    padding-left: 26px;
     background-color: rgba(120, 42, 245, 0.425);
-
 }
 
 .link2 {
@@ -92,7 +86,7 @@ a:hover {
     list-style-type: none;
     text-align: center;
     background-color: rgba(120, 42, 245, 0.425);
-    padding: 30px;
+    padding: 40px;
 }
 
 .link3 {
@@ -100,74 +94,90 @@ a:hover {
     list-style-type: none;
     background-color: rgba(120, 42, 245, 0.425);
     text-align: center;
-    padding: 30px;
+    padding: 40px;
 }
 
-.aside { 
+.aside {
     grid-area: aside;
     background-color: lightpink;
-    
- }
+}
 
- #unorder{
-    margin: 20px 30px 10px 30px;
-    width: 50%;
-    border: 1px solid green;
+#unorder {
+    margin: 0px 30px 10px 50px;
+    width: 70%;
     padding: 20px;
- }
- h3{
-    margin: 10px 30px 10px 10px;
-  width: 70%;
-  border: 1px solid green;
-  padding: 10px;
- }
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+h4 {
+    font-size: medium;
+}
+
+h3 {
+    margin: 10px 30px 0px 0px;
+    width: 70%;
+}
+
+#headline {
+    margin: 10px 30px 0px 10px;
+    width: 70%;
+    padding: 10px;
+}
 
 .main {
     grid-area: main;
     background-color: rgba(15, 211, 97, 0.185);
 }
 
-h2{
-    margin: 10px 30px 10px 10px;
-  width: 50%;
-  border: 1px solid green;
-  padding: 10px;
+h2 {
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin-left: 25px;
+    margin-bottom: 0px;
 }
 
-#paragragh{
-    margin: 10px 30px 10px 10px;
-  
-  border: 1px solid green;
-  padding: 10px;
-  width: 300px;
-  
+#paragragh {
+    text-align: justify;
+    padding: 10px;
+    width: 90%;
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-bottom: 0px;
 }
-.article1{
-    margin: 10px 30px 10px 10px;
+
+.article1 {
+    text-align: justify;
+    margin-left: 25px;
     float: left;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
-}
-.article2{
-    margin: 10px 20px 10px 10px;
-    float: right;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
+    width: 300px;
+    padding: 10px;
+    padding-top: 2px;
+    margin-top: 0px;
 }
 
- 
+.article2 {
+    text-align: justify;
+    margin-left: 25px;
+    float: left;
+    width: 300px;
+    padding: 10px;
+    padding-top: 2px;
+    margin-top: 0px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
 .footer {
     grid-area: footer;
     background-color: navy;
     text-align: center;
     padding: 10px;
     color: gainsboro;
-} 
-
-  
-
-  
-
-  
+}
